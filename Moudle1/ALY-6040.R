@@ -164,3 +164,17 @@ levels(CANdf$CAN.stringency_index)
 One_Hot_CAN_Stringency_index <-
   one_hot(as.data.table(CANdf$CAN.stringency_index))
 View(One_Hot_CAN_Stringency_index)
+
+#Outlier detection via boxplots, Mahalanobis distance - explain findings?
+ggplot(USAdf,aes(USA.date,USA.new_deaths_per_million))+
+  geom_boxplot()
+ggplot(USAdf,aes(USA.date,USA.total_deaths_per_million))+
+  geom_boxplot()
+ggplot(USAdf,aes(USA.date,USA.new_cases_per_million))+
+  geom_boxplot()
+ggplot(CANdf,aes(CAN.date,CAN.new_deaths_per_million))+
+  geom_boxplot()
+ggplot(CANdf,aes(CAN.date,CAN.total_deaths_per_million))+
+  geom_boxplot()
+ggplot(CANdf,aes(CAN.date,CAN.new_cases_per_million))+
+  geom_boxplot()
